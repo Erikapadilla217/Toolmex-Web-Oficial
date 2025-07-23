@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TOOLMEX | Herramienta 3 en 1</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -42,11 +43,6 @@
       margin-bottom: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-2px);
     }
 
     h2 {
@@ -101,15 +97,6 @@
       text-decoration: underline;
     }
 
-    .contacto img {
-      filter: brightness(100%);
-      transition: transform 0.3s;
-    }
-
-    .contacto img:hover {
-      transform: scale(1.1);
-    }
-
     .cta-button {
       background-color: #ffaa00;
       color: white;
@@ -127,11 +114,50 @@
       background-color: #e69500;
     }
 
+    .testimonios {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .testimonio {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
     footer {
       text-align: center;
       padding: 15px;
       font-size: 0.9em;
       color: #777;
+    }
+
+    /* WhatsApp flotante */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      font-size: 18px;
+      z-index: 999;
     }
 
     @media (max-width: 768px) {
@@ -144,52 +170,57 @@
         width: 100%;
         max-width: 300px;
       }
+
+      .testimonios {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="Logo.png" alt="Logo TOOLMEX">
+  <img src="Logo.png" alt="Logo TOOLMEX" />
   <h1>TOOLMEX</h1>
   <p>Herramienta modular 3 en 1: Pala, Pico y Rastrillo</p>
 </header>
 
-<section>
+<section data-aos="fade-up">
   <h2>TOOLMEX: Solución 3 en 1</h2>
   <p>¡Menos peso, menos gasto, más utilidad! Descubre por qué TOOLMEX revoluciona el mercado.</p>
   <div style="text-align:center;">
-    <img src="Promocion 1.png" alt="Imagen promocional TOOLMEX" style="max-width:60%;">
+    <img src="Promocion 1.png" alt="Promoción TOOLMEX" style="max-width:60%;" />
     <button class="cta-button">¡Comprar ahora!</button>
   </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Propuesta de Valor</h2>
-  <p>TOOLMEX ofrece una herramienta versátil, ligera y compacta que reúne las funciones de una pala, pico y rastrillo en un solo mango modular. Este diseño reduce espacio, peso y precio, al tiempo que mejora la ergonomía y evita lesiones físicas. Fabricada con materiales resistentes y cómodos, tiene un precio accesible de <strong>$1,445.00 MXN</strong>, muy por debajo del promedio del mercado.</p>
+  <p>TOOLMEX ofrece una herramienta versátil, ligera y compacta que reúne las funciones de una pala, pico y rastrillo en un solo mango modular. Este diseño reduce espacio, peso y precio, al tiempo que mejora la ergonomía y evita lesiones físicas. Precio accesible de <strong>$1,445.00 MXN</strong>.</p>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Lo que buscas</h2>
-  <img src="Herramienta.png" alt="Herramienta TOOLMEX">
+  <img src="Herramienta.png" alt="Herramienta TOOLMEX" />
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Lo que necesitas</h2>
-  <img src="Toolmix 3 en 1 ok.png" alt="Herramienta TOOLMEX">
+  <img src="Toolmix 3 en 1 ok.png" alt="TOOLMEX herramienta" />
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Misión</h2>
-  <p>Inspirar al mundo con nuestros productos y diseños innovadores que enriquecen la vida de las personas y contribuyen a la prosperidad social, creando un nuevo futuro y comodidad a nuestros clientes.</p>
+  <p>Inspirar al mundo con nuestros productos y diseños innovadores que enriquecen la vida de las personas.</p>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Visión</h2>
   <p>Ofrecer la mejor experiencia a nuestros clientes a través de herramientas más fáciles e innovadoras.</p>
 </section>
 
-<section>
+<section data-aos="fade-up">
   <h2>Valores</h2>
   <ul>
     <li>Responsabilidad</li>
@@ -200,22 +231,61 @@
   </ul>
 </section>
 
-<section class="contacto">
+<section data-aos="fade-up">
+  <h2>TOOLMEX en acción</h2>
+  <div style="text-align:center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TuVideoID" frameborder="0" allowfullscreen style="max-width:100%; border-radius:10px;"></iframe>
+  </div>
+</section>
+
+<section data-aos="fade-up">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="testimonios">
+    <div class="testimonio">
+      <p>“Excelente calidad y muy práctica. Me ahorra mucho espacio.”</p>
+      <strong>- Juan Pérez</strong>
+    </div>
+    <div class="testimonio">
+      <p>“La mejor herramienta que he comprado. Fácil de usar y ligera.”</p>
+      <strong>- Marta Gutiérrez</strong>
+    </div>
+  </div>
+</section>
+
+<section data-aos="fade-up">
+  <h2>Escríbenos</h2>
+  <form action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST" style="max-width:500px; margin:auto;">
+    <input type="text" name="nombre" placeholder="Tu nombre" required />
+    <input type="email" name="email" placeholder="Tu correo" required />
+    <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+    <button type="submit" class="cta-button">Enviar mensaje</button>
+  </form>
+</section>
+
+<section class="contacto" data-aos="fade-up">
   <h2>Contáctanos</h2>
   <p>📞 Llámanos al <a href="tel:+526644444444">664-XXXXXXX</a></p>
-  <p>🕒 Horario de atención: Lunes a viernes, 9:00 AM – 6:00 PM</p>
-
+  <p>🕒 Lunes a viernes, 9:00 AM – 6:00 PM</p>
   <div style="text-align:center; margin-top:15px;">
-    <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="32"></a>
-    <a href="https://instagram.com" target="_blank"><img src="instagram.jpg" alt="Instagram" width="32"></a>
-    <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" width="32"></a>
-    <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter" width="32"></a>
+    <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="32" /></a>
+    <a href="https://instagram.com" target="_blank"><img src="instagram.jpg" alt="Instagram" width="32" /></a>
+    <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" width="32" /></a>
+    <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter" width="32" /></a>
   </div>
 </section>
 
 <footer>
   <p>&copy; 2024 TOOLMEX | Todos los derechos reservados.</p>
 </footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/521664XXXXXXX" target="_blank" class="whatsapp-float">💬 WhatsApp</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
